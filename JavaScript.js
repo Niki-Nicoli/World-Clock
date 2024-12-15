@@ -58,6 +58,7 @@ function updateCity(event) {
          <div  class="time">${timeZone.format(
            "h:mm:ss"
          )} <small>${timeZone.format("a")}</small></div></div>
+         <div><a href="/">Return to All Cities</a?</div>
 `;
 }
 
