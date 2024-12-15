@@ -34,14 +34,20 @@ function timeZones() {
     .tz("America/Port-au-Prince")
     .format("hh:mm:ss")} <small>${timeZone.format("a")}</small>`;
 }
-
 setInterval(timeZones, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   console.log(cityTimeZone);
-  let cityName = cityTimeZone.split("/")[1];
-
+  if (cityTimeZone === "current-location") {
+    {
+      cityTimeZone = moment.tz.guess();
+    }
+    {
+      console.log(cityTimeZone);
+    }
+  }
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let timeZone = moment.tz(cityTimeZone);
   let cityUpdate = document.querySelector("#cities");
   cityUpdate.innerHTML = `<div class="city" >              
