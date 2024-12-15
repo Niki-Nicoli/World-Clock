@@ -36,3 +36,24 @@ function timeZones() {
 }
 
 setInterval(timeZones, 1000);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  console.log(cityTimeZone);
+  let cityName = cityTimeZone.split("/")[1];
+
+  let timeZone = moment.tz(cityTimeZone);
+  let cityUpdate = document.querySelector("#cities");
+  cityUpdate.innerHTML = `<div class="city" >              
+        <div><h2>${cityName}</h2>
+        <div id="${cityTimeZone}" class="date">${timeZone.format(
+    "ddd, MMMM D, YYYY"
+  )}</div></div>
+         <div  class="time">${timeZone.format(
+           "h:mm:ss"
+         )} <small>${timeZone.format("a")}</small></div></div>
+`;
+}
+
+let city = document.querySelector("#selection");
+city.addEventListener("change", updateCity);

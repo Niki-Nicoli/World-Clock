@@ -9,29 +9,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data-1970-2030.js"></script>
   </head>
   <body>
-    <div class="container">
+      <div class="container">
       <div>
         <h1>World Clock</h1>
-        <select class="selecttion">
+        <select id="selection" class="selection">
           <option value="">Select a City</option>
-          <option value="cairo">Cairo</option>
-          <option value="lagos">Lagos</option>
-          <option value="montreal">Montreal</option>
-          <option value="new-york">New York</option>
-          <option value="paris">Paris</option>
+          <option id="cairo" value="Africa/Cairo">Cairo</option>
+          <option id="lagos" value="Africa/Lagos">Lagos</option>
+          <option id="montreal" value="America/Montreal">Montreal</option>
+              <option id="paris" value="Europe/Paris">Paris</option>
         </select>
       </div>
 
-           <div class="city">
+
+
+<div id="cities">
+         <div class="city">
 <div  ><h2>Bangkok</h2>
  <div id="bangkok" class="date">Sat, December 14, 2024</div></div>
         <div id="bangkok-time" class="time">9:00:00 <smaller>PM</smaller></div>
       </div>
+      
     <div class="city">
 <div><h2>Johannesburg</h2>
  <div id="johannesburg" class="date">Sat, December 14, 2024</div></div>
         <div id="johannesburg-time" class="time">9:00:00  <smaller>PM</smaller></div>
       </div>
+      
      <div class="city">
               <div ><h2>New York</h2>
         <div id="new-york" class="date">Sat, December 14, 2024</div></div>
@@ -41,7 +45,7 @@
 <div ><h2>Port-au-Prince</h2>
  <div id="prince" class="date">Sat, December 14, 2024</div></div>
         <div id="prince-time" class="time">9:00:00  <smaller>PM</smaller></div>
-      </div>
+      </div></div>
     <br />
     <footer>
       Coded by
